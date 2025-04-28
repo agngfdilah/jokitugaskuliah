@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joki Bernadya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="animate-slide-down">
+        <h1>Joki Tugas Kuliah</h1>
+        <p>Deadline Dekat? Tugas Menumpuk? Serahkan pada kami!</p>
+    </header>
+
+    <section class="content animate-fade-in">
+        <h2>Daftar Jasa</h2>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Jasa Ketik</h3>
+                <ul>
+                    <li>Makalah: Rp 2.000/Halaman</li>
+                    <li>PPT: Rp 2.000/Slide</li>
+                    <li>Laprak: Mulai Rp 30.000</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Jasa Tulis Tangan</h3>
+                <ul>
+                    <li>Buku kecil/Binder A5: Rp 2.000/Lembar</li>
+                    <li>Buku besar: Rp 3.000/Lembar</li>
+                    <li>Kertas HVS A4: Rp 4.000/Lembar</li>
+                    <li>Kertas double folio: Rp 5.000/Lembar</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Jasa Edit</h3>
+                <ul>
+                    <li>Format, EYD: Rp 1.000</li>
+                    <li>Format, EYD + Typo: Rp 2.000</li>
+                    <li>Daftar Pustaka: Rp 2.000</li>
+                    <li>Data fisik, dll: Rp 5.000 - Rp 10.000</li>
+                    <li>Penomoran Halaman: Rp 1.000/10 halaman</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Essay & Jurnal</h3>
+                <ul>
+                    <li>Essay: Rp 10.000 - Rp 15.000</li>
+                    <li>Jurnal: Mulai Rp 20.000</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="order-form animate-slide-up">
+        <h2>Formulir Pemesanan</h2>
+        <form id="orderForm">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="layanan">Pilih Layanan:</label>
+            <select id="layanan" name="layanan" required>
+                <option value="">-- Pilih Layanan --</option>
+                <option value="Makalah">Makalah</option>
+                <option value="PPT">PPT</option>
+                <option value="Laprak">Laprak</option>
+                <option value="Tulis Tangan">Tulis Tangan</option>
+                <option value="Edit">Edit</option>
+                <option value="Essay">Essay</option>
+                <option value="Jurnal">Jurnal</option>
+            </select>
+
+            <label for="jumlah">Jumlah Halaman/Slide/Lembar:</label>
+            <input type="number" id="jumlah" name="jumlah" min="1" required>
+
+            <label for="catatan">Catatan Tambahan:</label>
+            <textarea id="catatan" name="catatan" rows="4"></textarea>
+
+            <button type="submit" class="btn">Kirim Pesanan</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Joki Tugas Kuliah. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8f2;
+    color: #333;
+}
+
+header {
+    background-color: #f6c177;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 5px solid #ffb347;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    color: #4e2600;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.content, .order-form {
+    padding: 2rem;
+}
+
+.content h2, .order-form h2 {
+    text-align: center;
+    color: #4e2600;
+    margin-bottom: 2rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #4e2600;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+form label {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+form input, form select, form textarea {
+    margin-top: 0.5rem;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn {
+    margin-top: 1.5rem;
+    background-color: #4e2600;
+    color: white;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #613100;
+}
+
+footer {
+    background-color: #f6c177;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+.animate-slide-down {
+    animation: slideDown 1s ease;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease;
+}
+
+.animate-fade-in {
+    animation: fadeIn 2s ease;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let nama = document.getElementById('nama').value;
+    let layanan = document.getElementById('layanan').value;
+    let jumlah = document.getElementById('jumlah').value;
+    let catatan = document.getElementById('catatan').value;
+
+    if (confirm(`Apakah data Anda sudah benar?\n\nNama: ${nama}\nLayanan: ${layanan}\nJumlah: ${jumlah}\nCatatan: ${catatan}`)) {
+        let message = `Halo, saya ${nama}%0ASaya ingin memesan layanan *${layanan}*%0AJumlah: ${jumlah}%0ACatatan: ${catatan}`;
+
+        let phoneNumber = "6282250651989"; // Nomor WhatsApp Anda
+
+        window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+    }
+});
